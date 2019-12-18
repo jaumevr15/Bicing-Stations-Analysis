@@ -159,3 +159,7 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.gitignore.io/api/python,windows,jupyternotebooks,visualstudiocode
+ 
+# Datasets to ignore
+2019_10_Octubre_BicingNou_ESTACIONS.csv
+October_cleaned.csv
