@@ -1,9 +1,9 @@
 <img src="https://bit.ly/2VnXWr2" alt="Ironhack Logo" width="100"/>
 
-# Title of My Project
-*[Your Name]*
+# Bicing: Understanding stations behaviour
+*[Jaume]*
 
-*[Your Cohort, Campus & Date]*
+*[Data Analytics Full-time, Ironhack Barcelona, 20/12/2019]*
 
 ## Content
 - [Project Description](#project-description)
@@ -19,13 +19,15 @@
 - [Links](#links)
 
 ## Project Description
-Write a short description of your project: 3-5 sentences about what your project is about, why you chose this topic (if relevant), and what you are trying to show.
+This project is meant to analyze and understand the behaviour of Bicing bike-sharing service stations in the city of Barcelona by using the Clusters method to identify patterns that can help solving uneven bike distribution, especially at workdays rush hour.
 
 ## Hypotheses / Questions
-* What data/business/research/personal question you would like to answer?
-* What is the context for the question and the possible scientific or business application?
-* What are the hypotheses you would like to test in order to answer your question?  
-Frame your hypothesis with statistical/data languages (i.e. define Null and Alternative Hypothesis). You can use formulas if you want but that is not required.
+* Bike stations seem to follow certain patterns of how full/empty the station can be depending on the time of the day.
+* Depending on their location and on the surroundings, some stations tend to be often full or often empty at rush hour.
+* Bicing bike-sharing system based in dock-stations limit the amount of bikes that can be left or taken, being sometimes unable to absorb the demand of users.
+* This project pretends to identify these patterns, understand their behaviour and by locating the stations that are more vulnerable to be full or empty in certain times.
+* Once patterns are identified and clusters can be located on a map, can the suggested clusters distribution assist on finding a solution to prevent stations meeting users needs?
+
 
 ## Dataset
 * Where did you get your data? If you downloaded a dataset (either public or private), describe where you downloaded it and include the command to load the dataset.
