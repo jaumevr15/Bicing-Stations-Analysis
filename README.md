@@ -77,21 +77,27 @@ The features of the model are then the following:
 * Cluster 4: Stations that behave as moderate Residentials, getting emptier at morning rush hour and slowly increasing the % of bikes. Especially located in Sants/Eixample/Sant Andreu/Gràcia.
 * Cluster 5: Stations behave as extreme residential locations with more extreme behavior than, for example, Cluster 4. This is due to the fact that these stations are located at areas of Barcelona which have low elevation and purely residential.
 
-## Model Training and Evaluation
-*Include this section only if you chose to include ML in your project.*
-* Describe how you trained your model, the results you obtained, and how you evaluated those results.
+## Model Training and Evaluation (2_geolocation_cluster_model.ipynb)
+The Model uses KMeans method to cluster the stations based on 29 features. The model has been tested using directly the 29 features and PCAComponents.
+
+The outcome has been very similar (only 2 stations being labeled differently), so initial model with 29 features is accepted for the project.
+
+The model extracts 4 clusters as initially expected, but there is one that behaves unexpectedly (Cluster 2, Low occupation). All of them are evaluated by the .describe() method understanding how does the standard deviation behave (as being aggregates of all the values of the stations involved). Surprisingly, Cluster 2 is the one with the lowest standard deviation, which indicates that those stations behave similarly. 
 
 ## Conclusion
-* Summarize your results. What do they mean?
-* What can you say about your hypotheses?
-* Interpret your findings in terms of the questions you try to answer.
+Bicing stations tend to follow behavioural patterns on weekdays. Users commute and move in certain patterns that can be identified through the evolution of the bike occupation at each station throughout the day.
+By knowing the behaviour of each cluster, and being able to identify and locate them, we can apply optimal solutions to the stations that behave with extreme values, and balance the uneven distribution of users along the city at specific times of the day, especially at rush hour.
 
 ## Future Work
-Address any questions you were unable to answer, or any next steps or future extensions to your project.
+#### The Cluster 2 enigma
+This project creates a new challenge that was initially not seen when facing the problem. There is a big cluster of stations which have very little amount of bikes throughout the day. For some reason, those stations are always half-empty. Understanding the causality of this behaviour would help to improve the user experience of the users around this cluster.
 
-## Workflow
-Outline the workflow you used in your project. What were the steps?
-How did you test the accuracy of your analysis and/or machine learning algorithm?
+#### The weekday/weekend & school time / holidays behaviour
+* Due to limitations of the data available, only weekdays of one month could be analyzed. This limits the accuracy of the behavior as October could have behaved differently (important to note how October was politically intense with demonstrations). Having data of other months would help confirm behaviours.
+* At the same time, weekends behavior seems unknown and hard to initially preview. An analysis on if there are unexpected patterns of behavior would be very helpful.
+* Following the same reasoning, understanding if patterns change when the season, or routine changes due to holidays could help understanding Bicing behaviour throughout the whole year...
+* ... and ultimately, be able to predict by time-series analysis future behavior, spotting how stations behave in especial events, festivals or holidays.
+
 
 ## Organization
 How did you organize your work? Did you use any tools like a trello or kanban board?
