@@ -1,7 +1,7 @@
 <img src="https://bit.ly/2VnXWr2" alt="Ironhack Logo" width="100"/>
 
 # Bicing: Understanding stations behaviour
-*[Jaume]*
+*[Jaume Vicens]*
 
 *[Data Analytics Full-time, Ironhack Barcelona, 20/12/2019]*
 
@@ -30,10 +30,15 @@ This project is meant to analyze and understand the behaviour of Bicing bike-sha
 
 
 ## Dataset
-* Where did you get your data? If you downloaded a dataset (either public or private), describe where you downloaded it and include the command to load the dataset.
-* Did you build your own datset? If so, did you use an API or a web scraper? PRovide the relevant scripts in your repo.
-* For all types of datasets, provide a description of the size, complexity, and data types included in your dataset, as well as a schema of the tables if necessary.
-* If the question cannot be answered with the available data, why not? What data would you need to answer it better?
+* The Dataset has been taken from [Barcelona Open Data](https://opendata-ajuntament.barcelona.cat/data/ca/dataset/estat-estacions-bicing). At some point in November, the dataset was available as .csv file -currently only as 7z-. At the moment to set the project it was expected to be able to use datasets from March to November. 7z files currently available cannot be decompressed at the moment.
+* For the project only October data is used.
+repo.
+* The data in the Dataset includes a record of each of the 400+ stations status recorded every 5-7 minutes.
+- Station ID
+- Number of bikes available at that certain time, specifying if there are mechanic or electric.
+- Status of the station (Is it working? Does it charge e-bikes?).
+- Time of updated and reported data.
+* At the same time, extracted the Station's location from a web_scrapping file made by Laurent Guerguy (github:laurent-guerguy).
 
 ## Cleaning
 Describe your full process of data wrangling and cleaning. Document why you chose to fill missing values, extract outliers, or create the variables you did as well as your reasoning behind the process.
