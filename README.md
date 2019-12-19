@@ -53,16 +53,29 @@ repo.
 * Particularly, data has been aggregated hourly. Obtaining the average amount of bikes for each station, on each particular hour.
 * Once this process is done, each hour (from 00:00 to 23:00) becomes a column-feature to build the model.
 
-#### Geolocation features (2_geolocation_cluster.ipynb)
-* Geolocation in lattitude and longitude are added from the bicing_ws_laurent.csv dataset.
+#### Geolocation features (2_geolocation_cluster_model.ipynb)
+* Geolocation in latitude and longitude are added from the bicing_ws_laurent.csv dataset.
 * Also added distance of each station from Plaça Catalunya using Geopy.
 
+#### The model features (2_geolocation_cluster_model.ipynb)
+The features of the model are then the following:
+* 24 columns for each hour of the day and its behaviour. 
+* Capacity of the station.
+* Distance in KM from the station to Plaça Catalunya.
+* Long/Lat coordinates
 
-## Analysis
-* Overview the general steps you went through to analyze your data in order to test your hypothesis.
-* Document each step of your data exploration and analysis.
-* Include charts to demonstrate the effect of your work.
-* If you used Machine Learning in your final project, describe your feature selection process.
+
+## Analysis (3_analysis.ipynb)
+* Once the data has been organized to have the hourly behaviour, and clustered into the different outputs, it can already be displayed by using different visualisation tools.
+* The first insights by plotting the behaviour of the different clutters show clear different patterns of behaviour throughout the day. 
+* These patterns, together with map visualisation through Tableau. Help understanding the features that are relevant to be classified in one cluster or the other.
+
+#### The clusters analysis:
+* Cluster 1: Stations to be half-full at most part of the day, but generally do not get completely full. Map locates the stations of this cluster below Gran Via and Meridiana, generally in pretty dense and busy areas.
+* Cluster 2: Stations of cluster 3 tend to be empty throughout most part of the day. This could be because of the higher elevation of these stations, and also because there might be areas where users tend to take bikes very fast.
+* Cluster 3: Stations from this cluster behave as work/educational locations. At morning rush hour the tendency is to get filled by bikes and then it slowly gets empty towards the end of the day. Map proves that they are located near office/university areas.
+* Cluster 4: Stations that behave as moderate Residentials, getting emptier at morning rush hour and slowly increasing the % of bikes. Especially located in Sants/Eixample/Sant Andreu/Gràcia.
+* Cluster 5: Stations behave as extreme residential locations with more extreme behavior than, for example, Cluster 4. This is due to the fact that these stations are located at areas of Barcelona which have low elevation and purely residential.
 
 ## Model Training and Evaluation
 *Include this section only if you chose to include ML in your project.*
