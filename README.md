@@ -44,8 +44,19 @@ repo.
 * The original dataset is pretty clean by default. First thing to be aware of is the format of the datetime columns (in Epoch time), which need to be transformed into %d %m %Y.
 * As the analysis focus on weekdays, it is important to identify the weekdays of the time range and extract only the rows that match the workdays.
 * The status column is used to verify if the data of the row can be taken into account or not. Rows which status is not "IN_SERVICE" are considered as not useful, hence dropped.
-* The focus is in "Station ID", "Num of bikes available", and "Last Updated". Rest of columns are dropped.
-Describe your full process of data wrangling and cleaning. Document why you chose to fill missing values, extract outliers, or create the variables you did as well as your reasoning behind the process.
+* The focus is in "Station ID", "Num of bikes available", and "Last Updated". Rest of columns are dropped
+* The number of bikes available was initially an absolute number. In order to have a better understanding on how likely each station is to be full or empty, those values have been transformed into %.
+* The maximum capacity is not provided by the dataset (although ttl column initially indicated) so it has been calculated by using the maximum value each station obtained in that particular month.
+
+#### Datetime handling (1_datetime.ipynb)
+* Datetime handling has been the main challenge of the data cleaning process. Rows have been merged/grouped by depending on the time of the day.
+* Particularly, data has been aggregated hourly. Obtaining the average amount of bikes for each station, on each particular hour.
+* Once this process is done, each hour (from 00:00 to 23:00) becomes a column-feature to build the model.
+
+#### Geolocation features (2_geolocation_cluster.ipynb)
+* Geolocation in lattitude and longitude are added from the bicing_ws_laurent.csv dataset.
+* Also added distance of each station from Plaça Catalunya using Geopy.
+
 
 ## Analysis
 * Overview the general steps you went through to analyze your data in order to test your hypothesis.
