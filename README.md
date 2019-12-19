@@ -29,7 +29,7 @@ This project is meant to analyze and understand the behaviour of Bicing bike-sha
 * Once patterns are identified and clusters can be located on a map, can the suggested clusters distribution assist on finding a solution to prevent stations meeting users needs?
 
 
-## Dataset
+## Dataset 
 * The Dataset has been taken from [Barcelona Open Data](https://opendata-ajuntament.barcelona.cat/data/ca/dataset/estat-estacions-bicing). At some point in November, the dataset was available as .csv file -currently only as 7z-. At the moment to set the project it was expected to be able to use datasets from March to November. 7z files currently available cannot be decompressed at the moment.
 * For the project only October data is used.
 repo.
@@ -40,7 +40,11 @@ repo.
 - Time of updated and reported data.
 * At the same time, extracted the Station's location from a web_scrapping file made by Laurent Guerguy (github:laurent-guerguy).
 
-## Cleaning
+## Cleaning (0_data_cleaning.ipynb)
+* The original dataset is pretty clean by default. First thing to be aware of is the format of the datetime columns (in Epoch time), which need to be transformed into %d %m %Y.
+* As the analysis focus on weekdays, it is important to identify the weekdays of the time range and extract only the rows that match the workdays.
+* The status column is used to verify if the data of the row can be taken into account or not. Rows which status is not "IN_SERVICE" are considered as not useful, hence dropped.
+* The focus is in "Station ID", "Num of bikes available", and "Last Updated". Rest of columns are dropped.
 Describe your full process of data wrangling and cleaning. Document why you chose to fill missing values, extract outliers, or create the variables you did as well as your reasoning behind the process.
 
 ## Analysis
