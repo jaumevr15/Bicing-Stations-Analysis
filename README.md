@@ -38,7 +38,7 @@ repo.
 - Number of bikes available at that certain time, specifying if there are mechanic or electric.
 - Status of the station (Is it working? Does it charge e-bikes?).
 - Time of updated and reported data.
-* At the same time, extracted the Station's location from a web_scrapping file made by Laurent Guerguy (github:laurent-guerguy).
+* At the same time, extracted the Station's location from a web_scrapping file made by [Laurent Guerguy] (https://github.com/laurent-guerguy).
 
 ## Cleaning (0_data_cleaning.ipynb)
 * The original dataset is pretty clean by default. First thing to be aware of is the format of the datetime columns (in Epoch time), which need to be transformed into %d %m %Y.
@@ -99,15 +99,26 @@ This project creates a new challenge that was initially not seen when facing the
 * ... and ultimately, be able to predict by time-series analysis future behavior, spotting how stations behave in especial events, festivals or holidays.
 
 
-## Organization
-How did you organize your work? Did you use any tools like a trello or kanban board?
+## Repository
+The repository is divided in three main folders:
+#### Dataset
+Includes the original dataset and the cleaned ones.
+* 2019_10_Octubre_BicingNou_ESTACIONS.rar: The original dataset. Due to over 200Mb size, it has been compressed. Please extract the file at the same folder to run it on the notebook.
+* October_cleaned.rar: Original dataset extracted null values, unneeded columns and transforming Epoch time. Due to its big size, it has been compressed. Please extract the file at the same folder to run it on the notebook.
+* bicing_ws_laurent.csv: Web-scrapping data extracted from [Laurent Guerguy] (https://github.com/laurent-guerguy), which included geolocation of the stations.
+* datetime_features.csv: Dataset generated after manipulating the information and aggregating the hourly behaviour. Used for the cluster model.
+* clusters.csv: Final dataset with the clusters allocated. Used for visualisations with Pyplot and Tableau.
 
-What does your repository look like? Explain your folder and file structure.
+#### Code
+* 0_data_cleaning.ipynb: Extracting the original data and taking the first cleaning steps.
+* 1_datetime.ipynb: Manipulating datetime columns and aggregating them into hourly performance.
+* 2_geolocation_cluster_model.ipynb: adding geolocation features and building the cluster model.
+* 3_analysis.ipynb: visualizing data to extract insights and analyze behaviours.
+
+#### Plots_maps
+This folder include the output maps/plots made by analyzing the data. It includes the Tableau file together with the pictures and icons used at the presentation.
 
 ## Links
-Include links to your repository, slides and trello/kanban board. Feel free to include any other links associated with your project.
-
-
-[Repository](https://github.com/)  
-[Slides](https://slides.com/)  
-[Trello](https://trello.com/en)  
+[Repository](https://github.com/jaumevr15/Bicing-Stations-Analysis)  
+[Slides](https://slides.com/jaumevicensrivas/bicing_behaviour/fullscreen#/)  
+[Trello](https://trello.com/b/qoPUVyn3/bicingstations-analysis)  
