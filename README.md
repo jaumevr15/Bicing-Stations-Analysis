@@ -20,6 +20,7 @@
 
 ## Project Description
 This project is meant to analyze and understand the behaviour of Bicing bike-sharing service stations in the city of Barcelona by using the Clusters method to identify patterns that can help solving uneven bike distribution, especially at workdays rush hour.
+For final visualisations of the insights extracted from the project [click here](https://tabsoft.co/2QDbsmT)
 
 ## Hypotheses / Questions
 * Bike stations seem to follow certain patterns of how full/empty the station can be depending on the time of the day.
@@ -121,4 +122,5 @@ This folder include the output maps/plots made by analyzing the data. It include
 ## Links
 [Repository](https://github.com/jaumevr15/Bicing-Stations-Analysis)  
 [Slides](https://slides.com/jaumevicensrivas/bicing_behaviour/fullscreen#/)  
-[Trello](https://trello.com/b/qoPUVyn3/bicingstations-analysis)  
+[Trello](https://trello.com/b/qoPUVyn3/bicingstations-analysis)
+[Tableau](https://tabsoft.co/2QDbsmT)
